@@ -18,3 +18,29 @@ body{
     place-content: center;
     padding: 1rem;
 }
+
+span{
+    font-size: 5rem;
+    display: inline-block;
+    transition: 100ms;
+    margin: none;
+    padding: none;
+    text-align: center;
+}
+
+span:hover{
+    cursor: pointer;
+    transform: translateY(-0.15rem) rotate(20deg);
+}
+
+@media (max-width:1278px){
+    span{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:768px){
+    span{
+        font-size: 0.5rem;
+    }
+}
