@@ -58,7 +58,7 @@ const updateUser = asyncHandler(async (req, res) => {
     const { id, username, roles, active, password } = req.body
 
     // Confirm data 
-    if (!_id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean') {
+    if (!id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean') {
         return res.status(400).json({ message: 'All fields except password are required.' })
     }
 
@@ -119,7 +119,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 
     const reply = `Username ${result.username} with ID ${result._id} deleted`
 
-    res.json(reply)
+    res.json({message: reply})
 })
 
 module.exports = {
